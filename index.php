@@ -61,9 +61,9 @@ function executeInstruction($instruction, $a, $b, $c, &$register)
 function checkBehaviour($triplet)
 {
     $opocodes = [];
-    $before; // registerA => 1, registerB => 2
-    $instruction = preg_split('/\s/', $triplet[1]); // [0] => opoc, [1] => valueA, [2] => valueB
-    $after; // registerA => 0...
+    $before;
+    $instruction = preg_split('/\s/', $triplet[1]);
+    $after;
     for ($i = 0; $i < 4; $i++) {
         $before [$i] = $triplet[0][9 + 3 * $i];
         $after [$i] = $triplet[2][9 + 3 * $i];
